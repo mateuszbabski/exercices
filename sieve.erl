@@ -12,8 +12,8 @@ primes(Limit) ->
 
 primes([], Primes) -> lists:reverse(Primes);
 
-primes([H|_T] = List, Primes) ->
-    NewList = ([X || X <- List, X rem H =/= 0]),
+primes([H|T], Primes) ->
+    NewList = ([X || X <- T, X rem H =/= 0]),
     primes(NewList, [H|Primes]).
 
 primes_test() ->
