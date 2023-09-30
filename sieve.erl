@@ -13,15 +13,8 @@ primes(Limit) ->
 primes([], Primes) -> lists:reverse(Primes);
 
 primes([H|_T] = List, Primes) ->
-    NewList = lists:flatten([[X] || X <- List, valid(X, H)]),
+    NewList = ([X || X <- List, X rem H =/= 0]),
     primes(NewList, [H|Primes]).
-
-
-valid(X, Y) -> 
-    case X rem Y of
-        0 -> false;
-        _ -> true
-    end.
 
 primes_test() ->
     [2, 3, 5, 7] = primes(10),
