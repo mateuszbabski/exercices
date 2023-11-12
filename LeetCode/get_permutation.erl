@@ -1,32 +1,35 @@
-%%The set [1, 2, 3, ..., n] contains a total of n! unique permutations.
+%%  Leet code exercise
+%%  60. Permutation sequence
 %%
-%%By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+%%  The set [1, 2, 3, ..., n] contains a total of n! unique permutations.
 %%
-%%"123"
-%%"132"
-%%"213"
-%%"231"
-%%"312"
-%%"321"
-%%Given n and k, return the kth permutation sequence.
+%%  By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
 %%
-%%Example 1:
+%%  "123"
+%%  "132"
+%%  "213"
+%%  "231"
+%%  "312"
+%%  "321"
+%%  Given n and k, return the kth permutation sequence.
 %%
-%%Input: n = 3, k = 3
-%%Output: "213"
-%%Example 2:
+%%  Example 1:
 %%
-%%Input: n = 4, k = 9
-%%Output: "2314"
-%%Example 3:
+%%  Input: n = 3, k = 3
+%%  Output: "213"
+%%  Example 2:
 %%
-%%Input: n = 3, k = 1
-%%Output: "123"
+%%  Input: n = 4, k = 9
+%%  Output: "2314"
+%%  Example 3:
+%%
+%%  Input: n = 3, k = 1
+%%  Output: "123"
 %% 
-%%Constraints:
+%%  Constraints:
 %%
-%%1 <= n <= 9
-%%1 <= k <= n!
+%%  1 <= n <= 9
+%%  1 <= k <= n!
 
 -module(get_permutation).
 
