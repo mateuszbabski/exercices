@@ -47,7 +47,7 @@ get_permutation(N, K) ->
 -spec permute_unique(Nums :: [integer()]) -> [[integer()]].
 permute_unique([]) -> [[]];
 permute_unique(Nums) ->
-    lists:usort([[H|T] || H <- Nums, T <- permute_unique(Nums--[H])]).
+    [[H|T] || H <- Nums, T <- permute_unique(Nums--[H])].
 
 permute_test() ->
     "213" = get_permutation(3,3).
