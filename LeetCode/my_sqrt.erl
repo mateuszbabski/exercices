@@ -39,7 +39,7 @@ my_sqrt(1) -> 1;
 my_sqrt(X) -> 
     check_root(1, X, X).
 
-check_root(Lower, Upper, X) when Lower > Upper -> Upper;
+check_root(Lower, Upper, _X) when Lower > Upper -> Upper;
 check_root(Lower, Upper, X) ->
     Root = Lower + ((Upper - Lower) div 2),
     if
